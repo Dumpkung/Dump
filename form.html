@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script language="javascript">
+function CheckForm() {
+    if(frm.fullname.value == '') {
+        alert('กรอกข้อมูลชื่อ-นามสกุล')
+        frm.fullname.focus()
+        return false
+    }else if(frm.age.value == '') {
+        alert('เลือกข้อมูลอายุ')
+        frm.age.focus()
+        return false
+    }
+}
+</script>
+</head>
+<body>
+<form name="frm" method="get" action="output.php" onsubmit="return CheckForm()">
+    <input type="text" name="fullname">
+    <select name="age">
+        <option value="">เลือกข้อมูล</option>
+        <option value="A">A</option>
+        <option value="B">B</option>
+        <option value="C">C</option>
+        <option value="D">D</option>
+    </select>
+    <input type="submit" name="btn" value="ส่งข้อมูล">
+</form>
+</body>
+</html>
